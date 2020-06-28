@@ -6,8 +6,7 @@ About
 
 This repository contains the 
 [MSigDB](https://www.gsea-msigdb.org/gsea/msigdb/collections.jsp)
-gene sets
--- 
+gene sets --
 specifically the CC-BY subset
 that includes 
 the cancer hallmark, the GO gene sets, etc.,
