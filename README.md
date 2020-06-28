@@ -2,32 +2,44 @@
 
 ## About
 
-This repository contains the MSigDB gene sets -- 
+This repository contains the 
+[MSigDB](https://www.gsea-msigdb.org/gsea/msigdb/collections.jsp)
+gene sets
+-- 
 specifically the CC-BY subset
 that includes 
 the cancer hallmark, the GO gene sets, etc.,
 but excludes KEGG and BIOCARTA (and AAAS/STKE) gene sets.
+The aim is to provide the gene sets
+in a format that is easy to load 
+as well as 
+a reference point for better code reproducibility.
 
-Hence, this dataset is licensed 
+
+This dataset is licensed 
 [CC(4.0)-BY](https://creativecommons.org/licenses/by/4.0/) Broad Institute.
 See 
 [here](https://www.gsea-msigdb.org/gsea/msigdb_license_terms.jsp)
 for details
 ([archived url](http://archive.ph/HCO4L)).
 
-The gene sets are provided in a 
+The gene sets are stored in a 
 single 
 JSON file (~60MB)
 compressed down to (~13MB)
 with [bzip2](https://en.wikipedia.org/wiki/Bzip2).
-
 The file was compiled from
  `msigdb.v7.1.symbols.gmt`
 and
 `msigdb.v7.1.entrez.gmt`
-downloaded from 
+obtained from 
 the [downloads](https://www.gsea-msigdb.org/gsea/downloads.jsp)
 page of MSigDB (2020-06-28).
+
+The file contains both
+the [Entrez Gene Identifiers](https://www.ncbi.nlm.nih.gov/gene) 
+and
+the [HUGO Gene Symbols.](https://www.genenames.org/)
 
 
 ## Python quick-start
@@ -71,6 +83,20 @@ The genes
 (but not necessarily the gene sets)
 are in the same order as in 
 the original files. 
+
+The following is a more Python-native way
+of loading the file as a dictionary.
+
+```python
+import json
+from zipfile import ZipFile
+
+with ZipFile("parsed/v7.1/genesets.zip") as zf:
+    with zf.open("genesets.json") as fd:
+        genesets = json.load(fd)
+
+print(genesets['HALLMARK_DNA_REPAIR'])
+```
 
 
 ## Download
