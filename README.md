@@ -1,12 +1,15 @@
 Gene sets
 =========
 
+[This is the original GitHub repository](https://github.com/numpde/genesets).
+
+
 About
 -----
 
-This repository contains the 
-[MSigDB](https://www.gsea-msigdb.org/gsea/msigdb/collections.jsp)
-gene sets --
+This repository
+contains the 
+[MSigDB gene sets](https://www.gsea-msigdb.org/gsea/msigdb/index.jsp) --
 specifically the CC-BY subset
 that includes 
 the cancer hallmark, the GO gene sets, etc.,
@@ -152,3 +155,24 @@ Download
 --------
 
 Download [genesets.json.zip](https://github.com/numpde/genesets/raw/16f1abd7b0673879d59ab9f74ff459beb86d99cf/genesets/data/parsed/v7.1/genesets.json.zip).
+
+
+How to cite
+-----------
+
+As of 2020-06-28, 
+the original website recommends citing
+
+- Subramanian, Tamayo, et al. ([2005, PNAS 102, 15545-15550](http://www.pnas.org/cgi/content/abstract/102/43/15545))
+
+and some of 
+
+- Liberzon, et al. ([2011, Bionformatics](https://doi.org/10.1093/bioinformatics/btr260))
+- Liberzon, et al. ([2015, Cell Systems](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4707969/))
+- the source for the gene set as listed on the [gene set page](https://www.gsea-msigdb.org/gsea/msigdb/genesets.jsp)
+
+as appropriate.
+Hence, as "the source for the gene set"
+you can refer to the URL of this repository
+or the specific link that you used
+to download the gene sets.
