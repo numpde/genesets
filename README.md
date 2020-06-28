@@ -98,6 +98,24 @@ with ZipFile("parsed/v7.1/genesets.zip") as zf:
 print(genesets['HALLMARK_DNA_REPAIR'])
 ```
 
+```
+{
+  "card": "http://www.gsea-msigdb.org/gsea/msigdb/cards/HALLMARK_DNA_REPAIR",
+  "symbols": [
+    "POLR2H",
+    "POLR2A",
+    "POLR2G",
+    ...
+  ],
+  "entrez": [
+    "5437",
+    "5430",
+    "5436",
+    ...
+  ]
+}
+```
+
 
 ## Download
 
