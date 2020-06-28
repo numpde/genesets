@@ -1,6 +1,8 @@
-# Gene sets
+Gene sets
+=========
 
-## About
+About
+-----
 
 This repository contains the 
 [MSigDB](https://www.gsea-msigdb.org/gsea/msigdb/collections.jsp)
@@ -42,7 +44,8 @@ and
 the [HUGO Gene Symbols.](https://www.genenames.org/)
 
 
-## Python quick-start
+Python quick-start
+------------------
 
 This is the quickest way to inspect the gene sets in Python:
 
@@ -117,6 +120,8 @@ print(genesets['HALLMARK_DNA_REPAIR'])
 ```
 
 
-## Download
+Download
+--------
 
 [Download link](https://github.com/numpde/genesets/raw/master/genesets/data/parsed/v7.1/genesets.zip).
+
