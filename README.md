@@ -42,6 +42,10 @@ the [Entrez Gene Identifiers](https://www.ncbi.nlm.nih.gov/gene)
 and
 the [HUGO Gene Symbols.](https://www.genenames.org/)
 
+Please consider 
+hitting the star 
+if this is useful to you.
+
 
 Python quick-start
 ------------------
@@ -123,4 +127,5 @@ Download
 --------
 
 [Download link](https://github.com/numpde/genesets/raw/master/genesets/data/parsed/v7.1/genesets.zip).
+
 
