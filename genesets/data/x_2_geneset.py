@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-df = pd.read_json("parsed/v7.1/genesets.zip")
+df = pd.read_json("parsed/v7.1/genesets.json.zip")
 
 i = 'HALLMARK_DNA_REPAIR'
 print(df[i].card)
