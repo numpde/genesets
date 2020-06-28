@@ -140,10 +140,11 @@ R quick-start
 -------------
 
 ```R
-install.packages("jsonlite")
-library(jsonlite)
-download.file("https://github.com/numpde/genesets/raw/16f1abd7b0673879d59ab9f74ff459beb86d99cf/genesets/data/parsed/v7.1/genesets.json.zip", tmp)
-genesets <- jsonlite::stream_in(unz(tmp, "genesets.json"))
+# install.packages("jsonlite")
+tmp <- tempfile()
+download.file("https://github.com/numpde/genesets/raw/6b506a98045d3f1a71fcb0040df861c220cb13e2/genesets/data/parsed/v7.1/genesets.zip", tmp)
+genesets <- jsonlite::stream_in(unz(tmp, "genesets.json"))  # Ignore warnings
+genesets$HALLMARK_HYPOXIA$entrez
 ```
 
 
