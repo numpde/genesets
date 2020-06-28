@@ -19,7 +19,7 @@ def parse(file):
 
     with ZipFile(file, mode='r') as zf:
         with zf.open("") as fd:
-            lines = [l.strip().split('\t') for l in fd.read().decode().split('\n') if l]
+            lines = [l.strip().split('\t') for l in fd.load().decode().split('\n') if l]
             data = [
                 {
                     'name': line[0],
@@ -77,7 +77,7 @@ def save(df):
     from zipfile import ZipFile, ZIP_BZIP2 as ZIP
     from pathlib import Path
 
-    file = (Path(__file__).parent / PARAM['parsed']) / "genesets.zip"
+    file = (Path(__file__).parent / PARAM['parsed']) / "genesets.json.zip"
     file.parent.mkdir(parents=True, exist_ok=True)
 
     with ZipFile(file, mode='w', compression=ZIP) as zf:
