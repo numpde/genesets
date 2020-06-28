@@ -69,7 +69,7 @@ entrez   [4208, 481, 6095, 10370, 351, 4216, 493, 2904,...  ...  [4208, 84962, 6
 ```
 
 The above URL refers to a certain commit on GitHub and
-is the contents is therefore immutable.
+its content is therefore immutable.
 Note that this will not cache the downloaded file.
 You can download the archive programmatically or manually 
 and read from disk, 
