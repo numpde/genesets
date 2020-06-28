@@ -54,8 +54,10 @@ This is the quickest way to inspect the gene sets in Python:
 
 ```python
 import pandas
-url = "https://github.com/numpde/genesets/raw/master/genesets/data/parsed/v7.1/genesets.zip"
+
+url = "https://github.com/numpde/genesets/raw/6b506a98045d3f1a71fcb0040df861c220cb13e2/genesets/data/parsed/v7.1/genesets.zip"
 df = pandas.read_json(url)
+
 print(df)
 ```
 
@@ -66,6 +68,8 @@ symbols  [MEF2C, ATP1B1, RORA, CITED2, APP, MAP3K4, ATP...  ...  [MEF2C, AJUBA, 
 entrez   [4208, 481, 6095, 10370, 351, 4216, 493, 2904,...  ...  [4208, 84962, 6328, 26071, 10492, 6096, 154810...
 ```
 
+The above URL refers to a certain commit on GitHub and
+is the contents is therefore immutable.
 Note that this will not cache the downloaded file.
 You can download the archive programmatically or manually 
 and read from disk, 
@@ -135,6 +139,5 @@ print(genesets['HALLMARK_DNA_REPAIR'])
 Download
 --------
 
-[Download link](https://github.com/numpde/genesets/raw/master/genesets/data/parsed/v7.1/genesets.zip).
-
+Download [the archive](https://github.com/numpde/genesets/raw/6b506a98045d3f1a71fcb0040df861c220cb13e2/genesets/data/parsed/v7.1/genesets.zip).
 
