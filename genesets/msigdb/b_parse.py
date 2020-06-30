@@ -19,7 +19,7 @@ def parse(file):
 
     with ZipFile(file, mode='r') as zf:
         with zf.open("") as fd:
-            lines = [l.strip().split('\t') for l in fd.load().decode().split('\n') if l]
+            lines = [l.strip().split('\t') for l in fd.read().decode().split('\n') if l]
             data = [
                 {
                     'name': line[0],
