@@ -13,9 +13,8 @@ that includes
 the cancer hallmark, the GO gene sets, etc.,
 but excludes KEGG and BIOCARTA (and AAAS/STKE) gene sets.
 The aim is to provide the gene sets
-in a format that is easy to load 
-as well as 
-a reference point for better code reproducibility.
+in a format that is compressed, easy to load and reference,
+and to assist code reproducibility.
 
 
 This dataset is licensed 
@@ -172,3 +171,63 @@ Hence, as "the source for the gene set"
 you can refer to the URL of this repository
 or the specific link that you used
 to download the gene sets.
+
+
+
+## Signatures of Single Cell Identities (SCSig)
+
+This repository
+contains the 
+[SCSig gene sets](https://www.gsea-msigdb.org/gsea/msigdb/supplementary_genesets.jsp#SCSig)
+([archive](http://archive.ph/wROHG)),
+compiled from 
+`scsig.all.v1.0.1.symbols.gmt`,
+`scsig.all.v1.0.1.entrez.gmt`
+and
+`scsig.v1.0.metadata.txt`.
+The *symbols*, *entrez* and *metadata* files 
+are
+merged into one JSON file.
+
+
+### Python quick-start
+
+```python
+import pandas as pd
+
+url = "https://github.com/numpde/genesets/raw/c3ee17dfb92b51be82e9bd7ff292a28a801da8aa/genesets/scsig/parsed/v1.0.1/genesets.json.zip"
+print(pd.read_json(url))
+```
+
+```
+                                Fan_Embryonic_CTX_Big_Groups_Cajal_Retzius  ...                                Hu_Fetal_Retina_RPE
+card                                                                    na  ...                                                 na
+symbols                  [RELN, WFIKKN2, IGFBP5, PRPH, PCP4, LINC01133,...  ...  [PMEL, TYRP1, PTGDS, SERPINF1, TTR, TYR, ELN, ...
+entrez                   [5649, 124857, 3488, 5630, 5121, 100505633, 79...  ...  [6490, 7306, 5730, 5176, 7276, 7299, 2006, 430...
+organism                                                      Homo sapiens  ...                                       Homo sapiens
+organ_system                                        Central Nervous System  ...                                      Visual System
+pmid                                                              29867213  ...                                           31269016
+publication_title        Spatial transcriptomic survey of human embryon...  ...  Dissecting the transcriptome landscape of the ...
+authors                  Fan X,Dong J,Zhong S,Wei Y,Wu Q,Yan L,Yong J,S...  ...  Hu Y,Wang X,Hu B,Mao Y,Chen Y,Yan L,Yong J,Don...
+geoid                                                            GSE103723  ...                                          GSE107618
+exact_source             Supplementary information, Table S3: DEGs_of_8...  ...                S4 Table: DEGs of all cell classes.
+external_details_url                                                        ...                                                   
+chip                                                     HUMAN_GENE_SYMBOL  ...                                  HUMAN_GENE_SYMBOL
+category_code                                                        SCSig  ...                                              SCSig
+contributor                                               Anthony Castanza  ...                                   Anthony Castanza
+contributor_org                                                MSigDB Team  ...                                        MSigDB Team
+description_brief                                                           ...                   Retinal Pigment Epithelium Cells
+raw_publication_members  RELN,WFIKKN2,IGFBP5,PRPH,PCP4,LINC01133,NDNF,A...  ...  PMEL,TYRP1,PTGDS,SERPINF1,TTR,TYR,ELN,TRPM1,TI...
+
+[17 rows x 257 columns]
+```
+
+### How to cite
+
+Refer to 
+the [gsea-msigdb website](https://www.gsea-msigdb.org/gsea/msigdb/supplementary_genesets.jsp#SCSig)
+([archive](http://archive.ph/wROHG))
+and 
+the respective publication/s of the gene set/s
+from the metadata.
+
