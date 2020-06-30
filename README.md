@@ -1,15 +1,13 @@
-Gene sets
-=========
+# Gene sets
 
 [This is the original GitHub repository](https://github.com/numpde/genesets).
 
 
-About
------
+## Molecular Signatures Database gene sets (MSigDB)
 
 This repository
 contains the 
-[Molecular Signatures Database (MSigDB) gene sets](https://www.gsea-msigdb.org/gsea/msigdb/index.jsp) --
+[MSigDB gene sets](https://www.gsea-msigdb.org/gsea/msigdb/index.jsp) --
 specifically the CC-BY subset
 that includes 
 the cancer hallmark, the GO gene sets, etc.,
@@ -50,8 +48,7 @@ hitting the star
 if this is useful to you.
 
 
-Python quick-start
-------------------
+### Python quick-start
 
 This is the quickest way to inspect the gene sets in Python:
 
@@ -139,8 +136,7 @@ print(genesets['HALLMARK_DNA_REPAIR'])
 ```
 
 
-R quick-start
--------------
+### R quick-start
 
 ```R
 # install.packages("jsonlite")
@@ -151,14 +147,12 @@ genesets$HALLMARK_HYPOXIA$entrez
 ```
 
 
-Download
---------
+### Download
 
 Download [genesets.json.zip](https://github.com/numpde/genesets/raw/53ce4ba8614d6d3ac2ca33243ea3f9f2c1f86ef5/genesets/msigdb/parsed/v7.1/genesets.json.zip).
 
 
-How to cite
------------
+### How to cite
 
 As of 2020-06-28, 
 the [original website](https://www.gsea-msigdb.org/gsea/msigdb)
