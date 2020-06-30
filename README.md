@@ -58,7 +58,7 @@ This is the quickest way to inspect the gene sets in Python:
 ```python
 import pandas
 
-url = "https://github.com/numpde/genesets/raw/16f1abd7b0673879d59ab9f74ff459beb86d99cf/genesets/data/parsed/v7.1/genesets.json.zip"
+url = "https://github.com/numpde/genesets/raw/16f1abd7b0673879d59ab9f74ff459beb86d99cf/genesets/msigdb/parsed/v7.1/genesets.json.zip"
 df = pandas.read_json(url)
 
 print(df)
@@ -145,7 +145,7 @@ R quick-start
 ```R
 # install.packages("jsonlite")
 tmp <- tempfile()
-download.file("https://github.com/numpde/genesets/raw/6b506a98045d3f1a71fcb0040df861c220cb13e2/genesets/data/parsed/v7.1/genesets.zip", tmp)
+download.file("https://github.com/numpde/genesets/raw/6b506a98045d3f1a71fcb0040df861c220cb13e2/genesets/msigdb/parsed/v7.1/genesets.zip", tmp)
 genesets <- jsonlite::stream_in(unz(tmp, "genesets.json"))  # Ignore warnings
 genesets$HALLMARK_HYPOXIA$entrez
 ```
@@ -154,14 +154,16 @@ genesets$HALLMARK_HYPOXIA$entrez
 Download
 --------
 
-Download [genesets.json.zip](https://github.com/numpde/genesets/raw/16f1abd7b0673879d59ab9f74ff459beb86d99cf/genesets/data/parsed/v7.1/genesets.json.zip).
+Download [genesets.json.zip](https://github.com/numpde/genesets/raw/16f1abd7b0673879d59ab9f74ff459beb86d99cf/genesets/msigdb/parsed/v7.1/genesets.json.zip).
 
 
 How to cite
 -----------
 
 As of 2020-06-28, 
-the original website recommends citing
+the [original website](https://www.gsea-msigdb.org/gsea/msigdb)
+([archive](http://archive.ph/0SuZl))
+recommends citing
 
 - Subramanian, Tamayo, et al. ([2005, PNAS 102, 15545-15550](http://www.pnas.org/cgi/content/abstract/102/43/15545))
 
